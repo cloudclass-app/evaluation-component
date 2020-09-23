@@ -1,4 +1,4 @@
-name: api/ci
+name: api-ci
 
 on:
   push:
@@ -9,10 +9,8 @@ on:
       - master
 
 jobs:
-  build:
-
+  "Build and test":
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -20,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.100-rc.1.20452.10
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ./api
     - name: Build
       run: dotnet build ./api --configuration Release --no-restore
     - name: Test
