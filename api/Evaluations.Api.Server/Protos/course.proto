@@ -1,0 +1,22 @@
+syntax = "proto3";
+option csharp_namespace = "Evaluations.Api.Server";
+package evaluation.course;
+
+service CourseService {
+    rpc Create(CourseNew) returns (Course);
+}
+
+message CourseNew {
+    string name = 100;
+
+    oneof description {
+        string description_value = 200;
+    }
+}
+
+message Course {
+    string id = 1;
+    string organization = 2;
+
+    string name = 100;
+}
