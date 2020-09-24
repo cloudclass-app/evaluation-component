@@ -11,7 +11,7 @@ on:
       - v*
 
 env:
-  IMAGE_NAME: evaluation-api
+  IMAGE_NAME: api
 
 jobs:
   test:
