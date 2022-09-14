@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0-rc.1.20451.13">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
